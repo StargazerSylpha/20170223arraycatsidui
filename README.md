@@ -20,6 +20,7 @@ idstyle.css：主要css文件。（第一次写写的很乱...网页文件里也
 
 loginbg.png：中英文登录页背景。（露露子萌爆~）
 
+hjb.png：滑稽币图像。（手动滑稽~）
 
 版权所有：
 
@@ -28,12 +29,4 @@ loginbg.png：中英文登录页背景。（露露子萌爆~）
 © 株式会社トリガー（TRIGGER Inc.）（背景图）
 
 
-部分文件托管：
-
-bootcss.com
-
-cloudflare.com
-
-jquery.com
-
-sinajs.cn
+部分文件采用外部托管。
