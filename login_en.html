@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Login - Arraycats.net</title>
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+           <link rel="stylesheet" type="text/css" href="idstyle.css" />
+            <script type="text/javascript">
+              
+              function findid()
+                  {alert("Please contact to administrator.")}
+            </script>
+    <style type="text/css">
+          body{
+            background-image:url(./loginbg.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+          }
+          
+        </style>
+    </head>
+
+    <body>
+    <div>
+<div class="loginpagebg" style="width:120px;height:20px;margin-top: -20px;float: right;">
+  <p align="center" style="margin-top: 0px;font-size: 14px"><a href="./login.html">简体中文</a> English</p>
+   
+  </div>
+      <div id="loginpage" class="row mainpage loginpagebg" style="margin-top: 20px;box-shadow: 5px 5px 10px #888888;">
+          <h5>Arraycats ID Login</h5>
+          <p>&nbsp;</p>
+        
+
+
+        <form action="#" class="col s12">
+          <!--id input area start-->
+          <div class="row">
+          <div class="input-field col s12">
+          <input id="username" type="text" class="validate" required="required" minlength="4" maxlength="25">
+          <label for="username">ID</label>
+          <font class="des"><a href="#" onclick="findid()">Forget Arraycats ID?</a></font>
+          </div>
+          </div>
+
+          <!--id input area end-->
+          <!--password input area start-->
+          <div class="row">
+          <div class="input-field col s12">
+          <input id="password" type="password" class="validate" required="required" minlength="6" maxlength="25">
+          <label for="password">Password</label>
+           <font class="des"><a href="findpassword.html">Forget password?</a></font>
+          </div>
+          </div>
+          <!--password input area end-->
+          <button class="btn waves-effect waves-light" type="submit" name="loginpageloginbutton">Login</button>
+          <p>&nbsp;</p>
+          <div class="thirdpartyidlogin" id="thirdpartyidlogin">
+          <a href="login.html">Login via social id?</a><br />
+          <a href="register.html">Create an Arraycats ID!</a>
+          </div>
+        </form>
+         <p>&nbsp;</p>
+        
+        <hr />
+        <p>Illustration by magodesu / &copy; TRIGGER Inc.</p>
+        <p>&copy; Arrayacts.net</p>
+
+      </div>
+</div>
+</div>
+    </body>
+  </html>

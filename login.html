@@ -1,0 +1,79 @@
+<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <title>登录 - Arraycats.net</title>
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="idstyle.css" />
+        <style type="text/css">
+          body{
+            background-image:url(./loginbg.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+          }
+    
+        </style>
+        <!--微博登录支持 start-->
+        <html xmlns:wb="http://open.weibo.com/wb">
+        <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=" type="text/javascript" charset="utf-8"></script>
+        <!--微博登录支持 end-->
+        <!--QQ登录start-->
+        <script>
+                   function qqLogin()
+                   {
+                      //以下为按钮点击事件的逻辑。注意这里要重新打开窗口
+                     //否则后面跳转到QQ登录，授权页面时会直接缩小当前浏览器的窗口，而不是打开新窗口，#处要求sdk
+                        var A=window.open("#","TencentLogin", 
+                      "width=450,height=320,menubar=0,scrollbars=1,resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+                      }
+
+                  function findid()
+                  {alert("这就真没办法啦...要不试试微博或者QQ登录？")}
+
+                    </script>
+        <!--QQ登录：需要appkey-->
+        <!--第一次写，写代码习惯不好，没有浏览器适配没有强迫症居中而且div乱用...顺便IE滚粗!! by Sylpha-->
+  </head>
+  <body>
+  <div>
+  <div class="loginpagebg" style="width:120px;height:20px;margin-top: -20px;float: right;">
+  <p align="center">简体中文 <a href="./login_en.html">English</a></p>
+   
+  </div>
+  <div class="mainpage loginpagebg" id="loginpage" style="box-shadow: 5px 5px 10px #888888;">
+   <div class="form-group">
+        <p><h3>登录 Arraycats ID</h3></p>
+        <p>&nbsp;</p>
+        <div class="panel panel-default" style="">
+        <div class="panel-body">
+        <form method="post" action="#" id="loginform" autocomplete="off">
+      	    <p><label>用户名</label></p>
+	            <p><input class="form-control" type="text" minlength="4" maxlength="25" name="username" placeholder="请输入用户名..." required="required" style=""></p>
+              <p class="des"><a href="#" onclick="findid()">忘记用户名？</a></p>
+	        <p><label>密码</label></p>
+	           <p><input class="form-control" minlength="6" maxlength="25" type="password" name="password" placeholder="请输入密码..." pattern=".+" required="required" style=""></p>
+             <p class="des"><a href="findpassword.html">忘记密码？</a></p>
+	        <p><button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;登录</button></p>
+        </form>
+
+                <div class="thirdpartyidlogin" id="thirdpartyidlogin">
+                   <wb:login-button type="3,5" onlogin="login" onlogout="logout">微博登录</wb:login-button>
+                  <a href="#" onclick='qqLogin()'>
+                     <img src="http://qzonestyle.gtimg.cn/qzone/vas/opensns/res/img/Connect_logo_3.png"></a>
+               </div>
+        </div>
+        </div>
+   </div>
+                
+               <p>&nbsp;</p>
+   <div class="toregisterpage" id="toregisterpage">
+  	    <p><h5>还未拥有Arraycats ID？</h5></p>
+  	    <p><a href="register.html">转到注册页面</a></p>
+   </div>
+               <hr />
+               <p>Illustration by magodesu / &copy; TRIGGER Inc.</p>
+               <p>&copy; Arraycats.net</p>
+  </div></div>
+  </body>
+</html>

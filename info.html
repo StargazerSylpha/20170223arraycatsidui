@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <title>账户总览 - Arraycats.net</title>
+        <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="idstyle.css">
+                <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <!--微博登录支持 start-->
+        <html xmlns:wb="http://open.weibo.com/wb">
+        <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=" type="text/javascript" charset="utf-8"></script>
+        <!--微博登录支持 end-->
+        <!--QQ登录start-->
+        <script type="text/javascript">
+          
+                   function toLogin()
+                   {
+                      //以下为按钮点击事件的逻辑。注意这里要重新打开窗口
+                     //否则后面跳转到QQ登录，授权页面时会直接缩小当前浏览器的窗口，而不是打开新窗口，#处要求sdk
+                        var A=window.open("#","TencentLogin", 
+                      "width=450,height=320,menubar=0,scrollbars=1,resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+                      }
+
+        </script>
+        <!--QQ登录：end需要appkey-->
+  </head>
+  <body>
+
+
+  <div class="mainpage" align="center">
+          <p><h3>Arraycats ID 账户总览</h3></p>
+          <p>&nbsp;</p>
+          <div class="panel panel-default" >
+        <div class="panel-body">
+          <p><label>已登录账户，用户名</label>&nbsp;<font class="normal">username</font>&nbsp;<a class="btn btn-danger" href="login.html" role="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;退出登录</a></p>
+          <!-- 访问php页面logout-->
+          <p><img src="http://ohx1zkpsb.bkt.clouddn.com/hjb.png" width="25px" height="25px" />&nbsp;<label>滑稽币</label>&nbsp;<font class="normal">0</font>&nbsp;<label>枚</label></p>
+          <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#changeidinfo"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;账户安全管理</button>
+          </div></div>
+          <!--退出按钮js待写-->
+
+<div class="panel panel-default">
+        <div class="panel-body">
+        <div class="keyactive">
+         <p><h4><label>Key（序列号）激活</label></h4></p>
+         <form method="post" action="#" id="keyform" autocomplete="off">
+         <p><label>Key（序列号）</label></p>
+         <p><input class="form-control" minlength="1" maxlength="25" name="cdkey" placeholder="请输入key..." required="required" style=""></p>
+         <p class="des">请输入您的Key（序列号）</p>
+         <p><button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;确认激活</button></p>
+         </form>
+        </div>
+        </div>         
+        </div>
+
+<div class="collapse" id="changeidinfo">
+
+   
+        <div class="panel panel-default" >
+        <div class="panel-body">
+    <div class="infoemailchange">
+      <p><h4><label>更改邮箱</label></h4></p>
+      <p><label>已绑定邮箱</label>&nbsp;<font class="normal">arraycats@arraycats.net</font></p>
+          
+       <form method="post" action="#" id="infoemailchangeform" autocomplete="off">
+          <p><label>邮箱</label></p>
+          <p><input class="form-control" type="email" name="email" placeholder="请输入邮箱..." required="required" style=""></p>
+          <p class="des">用于找回密码等安全事务</p>
+
+          <p><button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;发送确认邮件</button></p>
+       </form>
+    </div>
+</div></div>
+
+
+
+  <div class="panel panel-default" >
+        <div class="panel-body">
+   <div class="infopasswordchange">
+       <p><h4><label>更改密码</label></h4></p>
+        
+        <form method="post" action="#" id="infopasswordchangeform" autocomplete="off">
+       <p><label>新密码</label></p>
+            <p><input class="form-control" minlength="6" maxlength="25" type="password" name="password" placeholder="请输入新密码..." pattern=".+" required="required" style=""></p>
+              <p class="des">6~25位，可以由小写字母、数字、符号组成</p>
+
+      <p><button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;确认更改密码</button></p>
+    </form>
+    </div>
+</div></div>
+
+
+
+<div class="panel panel-default">
+        <div class="panel-body">
+                 <div class="infothirdpartyidbind">
+                           <p><h4><label>第三方账户绑定</label></h4></p>
+                           <p><label>微博账户</label>&nbsp;<wb:login-button type="3,5" onlogin="login" onlogout="logout">微博登录</wb:login-button></p>
+                           <p><label>QQ账户</label>&nbsp;<a href="#" onclick='toLogin()'><img src="http://qzonestyle.gtimg.cn/qzone/vas/opensns/res/img/Connect_logo_3.png"></a></p>
+                 </div>
+   </div></div>
+
+
+
+<div class="panel panel-default" >
+        <div class="panel-body">
+                 <div class="infodeleteid">
+                           <p><h4><label class="dangerdes">删除 Arraycats ID</label></h4></p>
+                           <div class="alert alert-danger" role="alert" style=""><strong>注意！</strong>删除Arraycats ID是不可逆操作！您在本站所有数据将被清除！请谨慎决定！站长也无能为力！</div>
+                <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#deleteid"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;删除账户</button>           
+              
+            <div class="collapse" id="deleteid">
+            <p>&nbsp;</p>
+                <form method="post" action="#" id="infodeleteidform" autocomplete="off">
+                <p><label>密码</label></p>
+                <p><input class="form-control" minlength="6" maxlength="25" type="password" name="password" placeholder="请输入密码..." pattern=".+" required="required" style=""></p>
+                <p class="des">为了删除您的Arraycats ID，请输入您的密码</p>
+
+                <p><button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;确认删除账户</button></p>
+                </form>
+            </div>
+
+                 </div>
+           </div>
+     </div>
+</div>
+               <hr />
+               <p>&copy; Arraycats.net</p>
+  
+  </div>
+  </body>
+</html>

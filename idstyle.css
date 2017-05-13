@@ -1,0 +1,9 @@
+.mainpage{margin:0 auto}
+.des{color:#888888;font-size: 12px;}
+.normal{font-size: 15px}
+.dangerdes{color:red;}
+html {overflow-x: hidden; overflow-y: auto; }
+.mainpage{width: 385px;text-align: center;}
+.loginpagebg{
+             background-color: #ffffff;padding: 0px;filter:alpha(Opacity=90);-moz-opacity:0.9;opacity: 0.9; 
+          }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <title>注册 - Arraycats.net</title>
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="idstyle.css" />
+
+  </head>
+  <body>
+  <div class="mainpage" align="center">
+   <div class="form-group">
+        <p><h3>注册 Arraycats ID</h3></p>
+        <p>&nbsp;</p>
+        <!--需要正则表达式控制用户名与密码框输入指定内容-->
+
+        <div class="panel panel-default" >
+        <div class="panel-body">
+        <form method="post" action="#" id="registerform" autocomplete="off">
+      	    <p><label>用户名</label></p>
+	            <p><input class="form-control" type="text" minlength="4" maxlength="25" name="username" placeholder="请输入用户名..." required="required" style=""></p>
+              <p class="des">4~25位，可以由小写字母、数字组成，不要带有特殊符号</p>
+	        <p><label>邮箱</label></p>
+	            <p><input class="form-control" type="email" name="email" placeholder="请输入邮箱..." required="required" style=""></p>
+              <p class="des">用于找回密码等安全事务</p>
+	        <p><label>密码</label></p>
+	            <p><input class="form-control" minlength="6" maxlength="25" type="password" name="password" placeholder="请输入密码..." pattern=".+" required="required" style=""></p>
+              <p class="des">6~25位，可以由小写字母、数字、符号组成</p>
+	        <p><button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;注册</button></p>
+        </form>
+        </div></div>
+   </div>
+   <p>&nbsp;</p>
+   <div class="tologinpage">
+  	    <p><h5>已经拥有Arraycats ID？ / 使用第三方账户登录？</h5></p>
+  	    <p><a href="login.html">转到登录页面</a></p>
+   </div>
+               <hr />
+               <p>&copy; Arraycats.net</p>
+  </div>
+  </body>
+</html>
